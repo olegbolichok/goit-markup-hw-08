@@ -1,0 +1,69 @@
+.section--grey {
+    background-color: $secondary-background-color;
+    width: 1600px;
+}
+.staff {
+    padding: 94px 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.staff__title {
+    @extend %section__title;
+}
+
+.staff__info {
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+.staff__name {
+    color: $title-text-color;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.19;
+    text-align: center;
+}
+.staff__position {
+    font-size: 16px;
+    line-height: 1.19;
+    text-align: center;
+    margin-top: 10px;
+}
+.staff__list {
+    display: flex;
+}
+.staff__card {
+    background-color: $primary-background-color;
+    border-radius: 0 0 4px 4px;
+    box-shadow: $staff__card__shadow;
+    width: 270px;
+}
+.staff__card:not(:last-child) {
+    margin-right: 30px;
+}
+.social-media {
+    display: flex;
+    width: 206px;
+    height: 44px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 16px;
+}
+.social-media__item:not(:last-child) {
+    margin-right: 10px;
+}
+.social-media__link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    fill: $icon-color;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    @include transition(background-color, fill);
+    &:hover,
+    &:focus {
+        fill: $primary-background-color;
+        background-color: $accent-color;
+    }
+}

@@ -1,0 +1,39 @@
+.features {
+    margin-bottom: 94px;
+}
+.features__title {
+    display: none;
+}
+.features__list {
+    display: flex;
+}
+.features__item:not(:last-child) {
+    margin-right: 30px;
+}
+.features__card {
+    display: flex;
+    width: 270px;
+    height: 120px;
+    background-color: $secondary-background-color;
+    border-radius: 4px;
+    margin-bottom: 30px;
+}
+.features__name {
+    color: $title-text-color;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    text-transform: uppercase;
+
+    margin-bottom: 10px;
+}
+.features__text {
+    font-size: 14px;
+    line-height: 1.7;
+    color: $primary-text-color;
+}
+.features__icon {
+    width: 70px;
+    margin-left: auto;
+    margin-right: auto;
+}

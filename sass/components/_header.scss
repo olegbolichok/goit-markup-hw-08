@@ -1,0 +1,124 @@
+.section {
+    display: flex;
+    align-items: center;
+
+    width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+.header {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+.section--underlined {
+    width: 100%;
+    border-bottom: 1px solid #ececec;
+}
+.header--underlined {
+    width: 1170px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.logo {
+    margin-right: 93px;
+
+    color: $accent-color;
+    font-family: Raleway;
+    font-size: 26px;
+    font-weight: 700;
+    line-height: 1.19;
+}
+.logo--black {
+    color: #000000;
+}
+.logo--white {
+    color: $primary-background-color;
+}
+
+.site-nav__list {
+    display: flex;
+}
+.site-nav__list :not(:last-child) {
+    margin-right: 50px;
+}
+
+.site-nav__link {
+    display: flex;
+    position: relative;
+
+    color: $title-text-color;
+    font-weight: 500;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+    padding: 32px 0;
+    @include transition(color);
+    &:hover,
+    &:focus {
+        color: $accent-color;
+    }
+    &::after {
+        content: '';
+        position: absolute;
+        display: flex;
+        left: 0;
+        bottom: 0;
+
+        height: 4px;
+        width: 100%;
+        border-radius: 4px;
+        background-color: $accent-color;
+
+        opacity: 0;
+        @include transition(opacity);
+    }
+}
+.site-nav__item:hover .site-nav__link::after,
+.site-nav__item:focus .site-nav__link::after {
+    opacity: 1;
+}
+.site-nav__link--current {
+    color: $accent-color;
+    &::after {
+        content: '';
+        position: absolute;
+        display: flex;
+        left: 0;
+        bottom: 0;
+        opacity: 1;
+
+        height: 4px;
+        width: 100%;
+        border-radius: 4px;
+        background-color: $accent-color;
+    }
+}
+.auth-nav {
+    display: flex;
+    margin-left: auto;
+}
+.auth-nav__item:not(:last-child) {
+    margin-right: 30px;
+}
+.auth-nav__link {
+    display: flex;
+    align-items: center;
+    color: $primary-text-color;
+    fill: $primary-text-color;
+    font-weight: 500;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+    padding: 24px 0;
+
+    @include transition(color, fill);
+    &:hover,
+    &:focus {
+        color: $accent-color;
+        fill: $accent-color;
+    }
+}
+.auth-nav__icon {
+    margin-right: 10px;
+}

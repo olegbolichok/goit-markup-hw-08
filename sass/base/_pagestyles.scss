@@ -1,0 +1,33 @@
+img {
+    display: block;
+}
+body {
+    margin: 0;
+}
+h1,
+h2,
+h3,
+h4,
+ul,
+li,
+p {
+    margin: 0;
+    padding: 0;
+}
+
+ul {
+    list-style-type: none;
+}
+button {
+    cursor: pointer;
+}
+a {
+    text-decoration: none;
+}
+
+body {
+    background-color: var(--primary-background-color);
+    color: var(--primary-text-color);
+    font-family: Roboto;
+    letter-spacing: 0.03em;
+}
