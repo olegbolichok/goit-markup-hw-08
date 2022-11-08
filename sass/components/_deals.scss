@@ -1,5 +1,9 @@
 .deals {
+    @extend %container;
     padding-bottom: 94px;
+    @media screen and (max-width: 1199px) {
+        display: none;
+    }
 }
 .deals__title {
     @extend %section__title;

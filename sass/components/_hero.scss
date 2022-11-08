@@ -3,6 +3,9 @@
     flex-direction: column;
     justify-content: center;
     margin-bottom: 94px;
+    @media screen and (max-width: 1199px) {
+        margin-bottom: 60px;
+    }
 }
 .hero {
     background-color: $hero-background-color;
@@ -10,23 +13,39 @@
     background-repeat: no-repeat;
     background-size: cover;
 
-    max-width: 1600px;
-    height: 600px;
     margin-left: auto;
     margin-right: auto;
-    padding: 200px 0;
+    padding: 200px;
+
+    @media screen and(max-width:1199px) {
+        padding: 118px 204px;
+    }
 }
-.hero__title {
+.hero-title {
     color: #ffffff;
-    font-weight: 900;
+
+    margin-top: 0;
+    margin-bottom: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 696px;
+    @media screen and (max-width: 1199px) {
+        width: 360px;
+    }
+}
+.hero-title__text {
     font-size: 44px;
     line-height: 1.36;
     text-align: center;
     letter-spacing: 0.06em;
     text-transform: uppercase;
+    font-weight: 900;
+    line-height: 1.36;
 
-    margin-top: 0;
-    margin-bottom: 30px;
+    @media screen and(max-width: 1199px) {
+        font-size: 26px;
+        line-height: 1.62;
+    }
 }
 .button {
     @extend %button;

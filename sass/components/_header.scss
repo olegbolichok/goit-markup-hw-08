@@ -1,35 +1,36 @@
 .section {
-    display: flex;
-    align-items: center;
-
-    width: 1200px;
-    margin-left: auto;
-    margin-right: auto;
     padding-right: 15px;
     padding-left: 15px;
 }
 .header {
     display: flex;
     align-items: center;
-    width: 100%;
 }
+.container {
+    @extend %container;
+    @media screen and (max-width: 767px) {
+        width: 480px;
+        padding: 0;
+    }
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+        width: 768px;
+        padding: 0;
+    }
+}
+
 .section--underlined {
-    width: 100%;
     border-bottom: 1px solid #ececec;
 }
-.header--underlined {
-    width: 1170px;
-    margin-left: auto;
-    margin-right: auto;
-}
 .logo {
-    margin-right: 93px;
-
     color: $accent-color;
     font-family: Raleway;
     font-size: 26px;
     font-weight: 700;
     line-height: 1.19;
+    @media screen and (max-width: 1199px) {
+        font-size: 24px;
+        line-height: 1.17;
+    }
 }
 .logo--black {
     color: #000000;
@@ -37,9 +38,34 @@
 .logo--white {
     color: $primary-background-color;
 }
-
+.button__burger {
+    background-color: $primary-background-color;
+    border: none;
+    padding: 0;
+    @media screen and (min-width: 768px) {
+        display: none;
+    }
+}
+.button__burger:hover,
+.button__burger:focus {
+    fill: $accent-color;
+}
+.icon__closed {
+    opacity: 0;
+}
+.button__burger.is-open .icon__burger {
+    opacity: 0;
+}
+.button__burger.is-open .icon__closed {
+    opacity: 1;
+}
 .site-nav__list {
     display: flex;
+    margin-left: 93px;
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+        margin-left: 88px;
+        margin-right: 84px;
+    }
 }
 .site-nav__list :not(:last-child) {
     margin-right: 50px;
@@ -51,6 +77,7 @@
 
     color: $title-text-color;
     font-weight: 500;
+    font-size: 14px;
     line-height: 1.14;
     letter-spacing: 0.02em;
     padding: 32px 0;
@@ -98,9 +125,18 @@
 .auth-nav {
     display: flex;
     margin-left: auto;
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+        display: block;
+        margin-right: 15px;
+        margin-left: 0;
+    }
 }
 .auth-nav__item:not(:last-child) {
     margin-right: 30px;
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
 }
 .auth-nav__link {
     display: flex;
@@ -118,7 +154,15 @@
         color: $accent-color;
         fill: $accent-color;
     }
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+        padding: 0;
+        font-size: 12px;
+        line-height: 1.17;
+    }
 }
 .auth-nav__icon {
     margin-right: 10px;
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+        margin-right: 8px;
+    }
 }
