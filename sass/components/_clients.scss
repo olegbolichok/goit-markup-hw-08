@@ -1,13 +1,17 @@
 .clients {
     @extend %container;
     padding: 94px 15px;
-    @media screen and (max-width: 767px) {
+    @media screen and (max-width: 479px) {
+        width: auto;
+        padding: 60px 15px;
+    }
+    @media screen and (min-width: 480px) and (max-width: 767px) {
         width: 480px;
-        padding: 60px 0;
+        padding: 60px 15px;
     }
     @media screen and (min-width: 768px) and (max-width: 1199px) {
         width: 768px;
-        padding: 60px 0;
+        padding: 60px 15px;
     }
 }
 .clients__title {
@@ -31,8 +35,10 @@
 }
 .clients__item {
     width: 170px;
-    height: 92px;
-    @media screen and (max-width: 767px) {
+    @media screen and (max-width: 479px) {
+        width: calc((100% - 2 * 15px) / 2);
+    }
+    @media screen and (min-width: 480px) and (max-width: 767px) {
         width: 210px;
     }
     @media screen and (min-width: 768px) and (max-width: 1199px) {

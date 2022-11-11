@@ -1,9 +1,13 @@
 .portfolio {
     @extend %container;
     padding: 94px 15px;
-    @media screen and (max-width: 767px) {
+    @media screen and (max-width: 479px) {
+        width: auto;
+        padding: 60px 15px;
+    }
+    @media screen and(min-width:480px) and(max-width: 767px) {
         width: 480px;
-        padding: 60px 0;
+        padding: 60px 15px;
     }
     @media screen and (min-width: 768px) and (max-width: 1199px) {
         width: 768px;
@@ -19,7 +23,6 @@
     margin-bottom: 50px;
     @media screen and (max-width: 767px) {
         flex-wrap: wrap;
-        padding-right: 103px;
         justify-content: flex-start;
     }
     @media screen and (min-width: 768px) and (max-width: 1199px) {
@@ -82,9 +85,14 @@
     &:not(:last-child) {
         @media screen and (max-width: 767px) {
             margin-bottom: 30px;
+            margin-right: 0;
         }
     }
-    @media screen and (max-width: 767px) {
+    @media screen and (max-width: 479px) {
+        margin-right: 0;
+        width: auto;
+    }
+    @media screen and (min-width: 480px) and(max-width:767) {
         margin-right: 0;
         width: 450px;
     }

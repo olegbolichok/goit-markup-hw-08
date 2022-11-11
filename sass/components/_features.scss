@@ -1,14 +1,17 @@
 .features {
     @extend %container;
-    margin-bottom: 94px;
-    @media screen and (max-width: 767px) {
+    padding: 94px 15px;
+    @media screen and (max-width: 479px) {
+        width: auto;
+        padding: 60px 15px;
+    }
+    @media screen and (min-width: 480px) and (max-width: 767px) {
         width: 480px;
-        margin-bottom: 60px;
+        padding: 60px 15px;
     }
     @media screen and (min-width: 768px) and (max-width: 1199px) {
         width: 768px;
-        margin-bottom: 60px;
-        padding: 0;
+        padding: 60px 15px;
     }
 }
 .features__title {
@@ -25,7 +28,7 @@
     }
 }
 .features__item {
-    @media screen and (max-width: 1199px) {
+    @media screen and (min-width: 767px) and (max-width: 1199px) {
         width: 354px;
     }
 }
@@ -55,7 +58,10 @@
     background-color: $secondary-background-color;
     border-radius: 4px;
     margin-bottom: 30px;
-    @media screen and (max-width: 767px) {
+    @media screen and (max-width: 479px) {
+        width: auto;
+    }
+    @media screen and (min-width: 480px) and (max-width: 767px) {
         width: 450px;
         margin-left: auto;
         margin-right: auto;

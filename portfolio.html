@@ -25,7 +25,7 @@
                     >
                     <button
                         type="button"
-                        class="button__burger is-open"
+                        class="button__burger"
                         data-menu-button
                     >
                         <svg
@@ -37,61 +37,103 @@
                                 href="./images/symbol-defs.svg#burger"
                                 class="icon__burger"
                             ></use>
-                            <use
-                                href="./images/symbol-defs.svg#burger_close"
-                                class="icon__closed"
-                            ></use>
                         </svg>
                     </button>
-                    <nav class="site-nav">
-                        <ul class="site-nav__list">
-                            <li class="site-nav__item">
-                                <a href="./index.html" class="site-nav__link"
-                                    >Студия</a
-                                >
+                    <div class="mobile-menu" data-menu>
+                        <button
+                            type="button"
+                            class="button__burger--close"
+                            data-menu-close
+                        >
+                            <svg
+                                width="40px"
+                                height="40px"
+                                aria-label="Кнопка мобильного меню"
+                            >
+                                <use
+                                    href="./images/symbol-defs.svg#burger_close"
+                                    class="icon__burger"
+                                ></use>
+                            </svg>
+                        </button>
+                        <nav class="site-nav">
+                            <ul class="site-nav__list">
+                                <li class="site-nav__item">
+                                    <a
+                                        href="./index.html"
+                                        class="site-nav__link"
+                                        >Студия</a
+                                    >
+                                </li>
+                                <li class="site-nav__item">
+                                    <a
+                                        href="./portfolio.html"
+                                        class="site-nav__link"
+                                        >Портфолио</a
+                                    >
+                                </li>
+                                <li class="site-nav__item">
+                                    <a
+                                        href="#"
+                                        class="site-nav__link site-nav__link--current"
+                                        >Контакты</a
+                                    >
+                                </li>
+                            </ul>
+                        </nav>
+                        <ul class="auth-nav">
+                            <li class="auth-nav__item">
+                                <a href="#" class="auth-nav__link">
+                                    <svg
+                                        class="auth-nav__icon"
+                                        width="16px"
+                                        height="12px"
+                                    >
+                                        <use
+                                            href="./images/symbol-defs.svg#envelope"
+                                        ></use>
+                                    </svg>
+                                    info@devstudio.com
+                                </a>
                             </li>
-                            <li class="site-nav__item">
-                                <a
-                                    href="./portfolio.html"
-                                    class="site-nav__link site-nav__link--current"
-                                    >Портфолио</a
+                            <li class="auth-nav__item">
+                                <a href="#" class="auth-nav__link"
+                                    ><svg
+                                        class="auth-nav__icon"
+                                        width="12px"
+                                        height="16px"
+                                    >
+                                        <use
+                                            href="./images/symbol-defs.svg#phone"
+                                        ></use>
+                                    </svg>
+                                    +38 096 111 11 11</a
                                 >
-                            </li>
-                            <li class="site-nav__item">
-                                <a href="#" class="site-nav__link">Контакты</a>
                             </li>
                         </ul>
-                    </nav>
-                    <ul class="auth-nav">
-                        <li class="auth-nav__item">
-                            <a href="#" class="auth-nav__link">
-                                <svg
-                                    class="auth-nav__icon"
-                                    width="16px"
-                                    height="12px"
-                                >
-                                    <use
-                                        href="./images/symbol-defs.svg#envelope"
-                                    ></use>
-                                </svg>
-                                info@devstudio.com
-                            </a>
-                        </li>
-                        <li class="auth-nav__item">
-                            <a href="#" class="auth-nav__link"
-                                ><svg
-                                    class="auth-nav__icon"
-                                    width="12px"
-                                    height="16px"
-                                >
-                                    <use
-                                        href="./images/symbol-defs.svg#phone"
-                                    ></use>
-                                </svg>
-                                +38 096 111 11 11</a
-                            >
-                        </li>
-                    </ul>
+                        <ul class="mobile-menu__social">
+                            <li class="mobile-menu__item">
+                                <a href="http://" class="mobile-menu__link">
+                                    Instagramm
+                                </a>
+                            </li>
+                            <li class="mobile-menu__item">
+                                <a href="http://" class="mobile-menu__link">
+                                    Twitter
+                                </a>
+                            </li>
+                            <li class="mobile-menu__item">
+                                <a href="http://" class="mobile-menu__link">
+                                    Facebook
+                                </a>
+                            </li>
+                            <li class="mobile-menu__item">
+                                <a href="http://" class="mobile-menu__link">
+                                    Linkedin
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
                 </header>
             </div>
         </section>
@@ -133,7 +175,13 @@
                             <a href class="portfolio__item">
                                 <div class="portfolio__image">
                                     <img
-                                        src="./images/tehnokryak.jpg"
+                                        srcset="
+                                            ./images/adaptive-images/portfolio1-370.jpg   370w,
+                                            ./images/adaptive-images/portfolio1-740.jpg   740w,
+                                            ./images/adaptive-images/portfolio1-1110.jpg 1110w
+                                        "
+                                        sizes="(min-width:1200px) 370px, (min-width:768px) 354px, (min-width:480px) 450px"
+                                        src="./images/adaptive-images/portfolio1-370.jpg"
                                         alt="Технокряк"
                                         width="100%"
                                     />
@@ -160,7 +208,13 @@
                             <a href class="portfolio__item">
                                 <div class="portfolio__image">
                                     <img
-                                        src="./images/poster.jpg"
+                                        srcset="
+                                            ./images/adaptive-images/portfolio2-370.jpg   370w,
+                                            ./images/adaptive-images/portfolio2-740.jpg   740w,
+                                            ./images/adaptive-images/portfolio2-1110.jpg 1110w
+                                        "
+                                        sizes="(min-width:1200px) 370px, (min-width:768px) 354px, (min-width:480px) 450px"
+                                        src="./images/adaptive-images/portfolio2-370.jpg"
                                         alt="Постер New Orlean vs Golden Star"
                                         width="100%"
                                     />
@@ -187,7 +241,13 @@
                             <a href class="portfolio__item">
                                 <div class="portfolio__image">
                                     <img
-                                        src="./images/seafood.jpg"
+                                        srcset="
+                                            ./images/adaptive-images/portfolio3-370.jpg   370w,
+                                            ./images/adaptive-images/portfolio3-740.jpg   740w,
+                                            ./images/adaptive-images/portfolio3-1110.jpg 1110w
+                                        "
+                                        sizes="(min-width:1200px) 370px, (min-width:768px) 354px, (min-width:480px) 450px"
+                                        src="./images/adaptive-images/portfolio3-370.jpg"
                                         alt="Ресторан Seafood"
                                         width="100%"
                                     />
@@ -214,7 +274,15 @@
                             <a href class="portfolio__item">
                                 <div class="portfolio__image">
                                     <img
-                                        src="./images/prime.jpg"
+                                        srcset="
+                                            ./images/adaptive-images/portfolio4-370.jpg   370w,
+                                            ./images/adaptive-images/portfolio4-740.jpg   740w,
+                                            ./images/adaptive-images/portfolio4-1110.jpg 1110w
+                                        "
+                                        sizes="(min-width:1200px) 370px,
+                                    (min-width:768px) 354px, (min-width:480px)
+                                    450px"
+                                        src="./images/adaptive-images/portfolio4-370.jpg"
                                         alt="Проект Prime"
                                         width="100%"
                                     />
@@ -241,7 +309,13 @@
                             <a href class="portfolio__item">
                                 <div class="portfolio__image">
                                     <img
-                                        src="./images/boxes.jpg"
+                                        srcset="
+                                            ./images/adaptive-images/portfolio5-370.jpg   370w,
+                                            ./images/adaptive-images/portfolio5-740.jpg   740w,
+                                            ./images/adaptive-images/portfolio5-1110.jpg 1110w
+                                        "
+                                        sizes="(min-width:1200px) 370px, (min-width:768px) 354px, (min-width:480px) 450px"
+                                        src="./images/adaptive-images/portfolio5-370.jpg"
                                         alt="Проект Boxes"
                                         width="100%"
                                     />
@@ -268,7 +342,13 @@
                             <a href class="portfolio__item">
                                 <div class="portfolio__image">
                                     <img
-                                        src="./images/inspiration.jpg"
+                                        srcset="
+                                            ./images/adaptive-images/portfolio6-370.jpg   370w,
+                                            ./images/adaptive-images/portfolio6-740.jpg   740w,
+                                            ./images/adaptive-images/portfolio6-1110.jpg 1110w
+                                        "
+                                        sizes="(min-width:1200px) 370px, (min-width:768px) 354px, (min-width:480px) 450px"
+                                        src="./images/adaptive-images/portfolio6-370.jpg"
                                         alt="Inspiration has no borders"
                                         width="100%"
                                     />
@@ -295,7 +375,13 @@
                             <a href class="portfolio__item">
                                 <div class="portfolio__image">
                                     <img
-                                        src="./images/limitededition.jpg"
+                                        srcset="
+                                            ./images/adaptive-images/portfolio7-370.jpg   370w,
+                                            ./images/adaptive-images/portfolio7-740.jpg   740w,
+                                            ./images/adaptive-images/portfolio7-1110.jpg 1110w
+                                        "
+                                        sizes="(min-width:1200px) 370px, (min-width:768px) 354px, (min-width:480px) 450px"
+                                        src="./images/adaptive-images/portfolio7-370.jpg"
                                         alt="Издание Limited Edition"
                                         width="100%"
                                     />
@@ -322,7 +408,13 @@
                             <a href class="portfolio__item">
                                 <div class="portfolio__image">
                                     <img
-                                        src="./images/lab.jpg"
+                                        srcset="
+                                            ./images/adaptive-images/portfolio8-370.jpg   370w,
+                                            ./images/adaptive-images/portfolio8-740.jpg   740w,
+                                            ./images/adaptive-images/portfolio8-1110.jpg 1110w
+                                        "
+                                        sizes="(min-width:1200px) 370px, (min-width:768px) 354px, (min-width:480px) 450px"
+                                        src="./images/adaptive-images/portfolio8-370.jpg"
                                         alt="Проект LAB"
                                         width="100%"
                                     />
@@ -347,7 +439,13 @@
                             <a href class="portfolio__item">
                                 <div class="portfolio__image">
                                     <img
-                                        src="./images/growing.jpg"
+                                        srcset="
+                                            ./images/adaptive-images/portfolio9-370.jpg   370w,
+                                            ./images/adaptive-images/portfolio9-740.jpg   740w,
+                                            ./images/adaptive-images/portfolio9-1110.jpg 1110w
+                                        "
+                                        sizes="(min-width:1200px) 370px, (min-width:768px) 354px, (min-width:480px) 450px"
+                                        src="./images/adaptive-images/portfolio9-370.jpg"
                                         alt="Growing Business"
                                         width="100%"
                                     />

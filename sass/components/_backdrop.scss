@@ -8,7 +8,7 @@
 
     background-color: rgba(0, 0, 0, 0.2);
     opacity: 1;
-
+    overflow-y: scroll;
     @include transition(opacity);
 }
 .backdrop--is-hidden {
@@ -22,18 +22,19 @@
     transform: translate(-50%, 0%);
 
     width: 528px;
-    height: 581px;
+    padding-bottom: 40px;
     border-radius: 4px;
 
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
         0px 2px 1px rgba(0, 0, 0, 0.2);
     background-color: $primary-background-color;
-
-    @media screen and (max-width: 1199px) {
+    @media screen and (max-width: 479px) {
         top: 93px;
-
+        width: 94%;
+    }
+    @media screen and(min-width:480px) and (max-width: 1199px) {
+        top: 93px;
         width: 450px;
-        height: 609px;
     }
     @media screen and (min-width: 768px) and (max-width: 1199px) {
         top: 208px;
@@ -101,6 +102,9 @@
     &:focus {
         outline: none;
         border-color: $accent-color;
+        @media screen and (max-width: 479px) {
+            width: auto;
+        }
     }
 }
 .modal__input::placeholder {
@@ -132,12 +136,11 @@
     position: absolute;
 }
 .modal__checkbox-icon {
-    display: flex;
+    display: inline-block;
     width: 16px;
     height: 15px;
     border: 2px solid $title-text-color;
     border-radius: 2px;
-    margin-right: 8.3px;
 }
 .modal__checkbox:checked + .modal__checkbox-icon {
     background-color: $accent-color;
@@ -156,20 +159,18 @@
 }
 .modal__policy-text {
     letter-spacing: 0.03em;
-    display: flex;
     font-size: 14px;
     line-height: 1.71;
     color: $primary-text-color;
-    align-items: center;
     @media screen and (max-width: 1199px) {
         font-size: 12px;
         line-height: 1.17;
     }
 }
 .modal__policy-link {
+    display: contents;
     color: $accent-color;
     text-decoration-line: underline;
-    margin-left: 4px;
 }
 .modal__submit {
     @extend %button;
@@ -177,7 +178,7 @@
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     margin-right: auto;
     margin-left: auto;
-    width: 200px;
+    padding: 15px 55px;
     &:hover,
     &:focus {
         background-color: #188ce8;

@@ -23,7 +23,7 @@
                     >
                     <button
                         type="button"
-                        class="button__burger is-open"
+                        class="button__burger"
                         data-menu-button
                     >
                         <svg
@@ -35,63 +35,101 @@
                                 href="./images/symbol-defs.svg#burger"
                                 class="icon__burger"
                             ></use>
-                            <use
-                                href="./images/symbol-defs.svg#burger_close"
-                                class="icon__closed"
-                            ></use>
                         </svg>
                     </button>
-                    <nav class="site-nav">
-                        <ul class="site-nav__list">
-                            <li class="site-nav__item">
-                                <a
-                                    href="./index.html"
-                                    class="site-nav__link site-nav__link--current"
-                                    >Студия</a
-                                >
+                    <div class="mobile-menu" data-menu>
+                        <button
+                            type="button"
+                            class="button__burger--close"
+                            data-menu-close
+                        >
+                            <svg
+                                width="40px"
+                                height="40px"
+                                aria-label="Кнопка мобильного меню"
+                            >
+                                <use
+                                    href="./images/symbol-defs.svg#burger_close"
+                                    class="icon__burger"
+                                ></use>
+                            </svg>
+                        </button>
+                        <nav class="site-nav">
+                            <ul class="site-nav__list">
+                                <li class="site-nav__item">
+                                    <a
+                                        href="./index.html"
+                                        class="site-nav__link site-nav__link--current"
+                                        >Студия</a
+                                    >
+                                </li>
+                                <li class="site-nav__item">
+                                    <a
+                                        href="./portfolio.html"
+                                        class="site-nav__link"
+                                        >Портфолио</a
+                                    >
+                                </li>
+                                <li class="site-nav__item">
+                                    <a href="#" class="site-nav__link"
+                                        >Контакты</a
+                                    >
+                                </li>
+                            </ul>
+                        </nav>
+                        <ul class="auth-nav">
+                            <li class="auth-nav__item">
+                                <a href="#" class="auth-nav__link">
+                                    <svg
+                                        class="auth-nav__icon"
+                                        width="16px"
+                                        height="12px"
+                                    >
+                                        <use
+                                            href="./images/symbol-defs.svg#envelope"
+                                        ></use>
+                                    </svg>
+                                    info@devstudio.com
+                                </a>
                             </li>
-                            <li class="site-nav__item">
-                                <a
-                                    href="./portfolio.html"
-                                    class="site-nav__link"
-                                    >Портфолио</a
+                            <li class="auth-nav__item">
+                                <a href="#" class="auth-nav__link"
+                                    ><svg
+                                        class="auth-nav__icon"
+                                        width="12px"
+                                        height="16px"
+                                    >
+                                        <use
+                                            href="./images/symbol-defs.svg#phone"
+                                        ></use>
+                                    </svg>
+                                    +38 096 111 11 11</a
                                 >
-                            </li>
-                            <li class="site-nav__item">
-                                <a href="#" class="site-nav__link">Контакты</a>
                             </li>
                         </ul>
-                    </nav>
-                    <ul class="auth-nav">
-                        <li class="auth-nav__item">
-                            <a href="#" class="auth-nav__link">
-                                <svg
-                                    class="auth-nav__icon"
-                                    width="16px"
-                                    height="12px"
-                                >
-                                    <use
-                                        href="./images/symbol-defs.svg#envelope"
-                                    ></use>
-                                </svg>
-                                info@devstudio.com
-                            </a>
-                        </li>
-                        <li class="auth-nav__item">
-                            <a href="#" class="auth-nav__link"
-                                ><svg
-                                    class="auth-nav__icon"
-                                    width="12px"
-                                    height="16px"
-                                >
-                                    <use
-                                        href="./images/symbol-defs.svg#phone"
-                                    ></use>
-                                </svg>
-                                +38 096 111 11 11</a
-                            >
-                        </li>
-                    </ul>
+                        <ul class="mobile-menu__social">
+                            <li class="mobile-menu__item">
+                                <a href="http://" class="mobile-menu__link">
+                                    Instagramm
+                                </a>
+                            </li>
+                            <li class="mobile-menu__item">
+                                <a href="http://" class="mobile-menu__link">
+                                    Twitter
+                                </a>
+                            </li>
+                            <li class="mobile-menu__item">
+                                <a href="http://" class="mobile-menu__link">
+                                    Facebook
+                                </a>
+                            </li>
+                            <li class="mobile-menu__item">
+                                <a href="http://" class="mobile-menu__link">
+                                    Linkedin
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
                 </header>
             </div>
         </section>
@@ -185,7 +223,13 @@
                         <li class="deals__item">
                             <a href="#"
                                 ><img
-                                    src="./images/deals_1.jpg"
+                                    srcset="
+                                        ./images/adaptive-images/deals1-370.jpg   370w,
+                                        ./images/adaptive-images/deals1-740.jpg   740w,
+                                        ./images/adaptive-images/deals1-1110.jpg 1110w
+                                    "
+                                    sizes="370px"
+                                    src="./images/adaptive-images/deals1-370.jpg"
                                     alt="Десктопные приложения"
                                     width="370"
                             /></a>
@@ -194,18 +238,28 @@
                         <li class="deals__item">
                             <a href="#"
                                 ><img
-                                    src="./images/deals_2.jpg"
+                                    srcset="
+                                        ./images/adaptive-images/deals2-370.jpg   370w,
+                                        ./images/adaptive-images/deals2-740.jpg   740w,
+                                        ./images/adaptive-images/deals2-1110.jpg 1110w
+                                    "
+                                    sizes="370px"
+                                    src="./images/adaptive-images/deals2-370.jpg"
                                     alt="Мобильные приложения"
-                                    width="370"
                             /></a>
                             <p class="deals__name">Мобильные приложения</p>
                         </li>
                         <li class="deals__item">
                             <a href="#"
                                 ><img
-                                    src="./images/deals_3.jpg"
+                                    srcset="
+                                        ./images/adaptive-images/deals3-370.jpg   370w,
+                                        ./images/adaptive-images/deals3-740.jpg   740w,
+                                        ./images/adaptive-images/deals3-1110.jpg 1110w
+                                    "
+                                    sizes="370px"
+                                    src="./images/adaptive-images/deals3-370.jpg"
                                     alt="Дизайнерские решения"
-                                    width="370"
                             /></a>
                             <p class="deals__name">Дизайнерские решения</p>
                         </li>
@@ -219,7 +273,13 @@
                     <ul class="staff__list">
                         <li class="staff__card">
                             <img
-                                src="./images/igor.jpg"
+                                srcset="
+                                    ./images/adaptive-images/igor270.jpg 270w,
+                                    ./images/adaptive-images/igor540.jpg 540w,
+                                    ./images/adaptive-images/igor810.jpg 810w
+                                "
+                                sizes="(min-width:1200px) 270px, (min-width:768px) 354px, (min-width:480px) 450px"
+                                src="./images/adaptive-images/igor270.jpg"
                                 alt="Игорь Демьяненко"
                                 width="100%"
                             />
@@ -280,7 +340,13 @@
                         </li>
                         <li class="staff__card">
                             <img
-                                src="./images/olga.jpg"
+                                srcset="
+                                    ./images/adaptive-images/olga270.jpg 270w,
+                                    ./images/adaptive-images/olga540.jpg 540w,
+                                    ./images/adaptive-images/olga810.jpg 810w
+                                "
+                                sizes="(min-width:1200px) 270px, (min-width:768px) 354px, (min-width:480px) 450px"
+                                src="./images/adaptive-images/olga270.jpg"
                                 alt="Ольга Репина"
                                 width="100%"
                             />
@@ -343,7 +409,13 @@
                         </li>
                         <li class="staff__card">
                             <img
-                                src="./images/nikolai.jpg"
+                                srcset="
+                                    ./images/adaptive-images/nikolai270.jpg 270w,
+                                    ./images/adaptive-images/nikolai540.jpg 540w,
+                                    ./images/adaptive-images/nikolai810.jpg 810w
+                                "
+                                sizes="(min-width:1200px) 270px, (min-width:768px) 354px, (min-width:480px) 450px"
+                                src="./images/adaptive-images/nikolai270.jpg"
                                 alt="Николай Тарасов"
                                 width="100%"
                             />
@@ -404,7 +476,13 @@
                         </li>
                         <li class="staff__card">
                             <img
-                                src="./images/mikhail.jpg"
+                                srcset="
+                                    ./images/adaptive-images/mihail270.jpg 270w,
+                                    ./images/adaptive-images/mihail540.jpg 540w,
+                                    ./images/adaptive-images/mihail810.jpg 810w
+                                "
+                                sizes="(min-width:1200px) 270px, (min-width:768px) 354px, (min-width:480px) 450px"
+                                src="./images/adaptive-images/mihail270.jpg"
                                 alt="Михаил Ермаков"
                                 width="100%"
                             />
